@@ -1,0 +1,29 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+
+#Read the data ---------------------
+data_path = "~/Desktop/2016-07-11_ipm_data.txt"
+data = np.genfromtxt(data_path, delimiter = ',')
+#----------------------------------
+
+
+
+fig, dot = plt.subplots() 
+dot.plot(data)
+
+#--The mark the maximum with a red dot! ----------
+xmax = np.amax(data)
+ymax = np.where(data == xmax)
+dot.plot(ymax, xmax, 'ro')
+#-----------------------------------
+
+
+plt.title('ionisation beam')
+plt.grid(color='black', linestyle='-', linewidth=0.5)
+
+
+
+fig = plt.show
+plt.savefig('ionisation_beam_profile_monitor_(IPM).png')
