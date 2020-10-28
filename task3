@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 
 #Read the data ---------------------
-data_path = "~/Desktop/2016-07-11_ipm_data.txt"
+data_path = "~/Users/selin/Downloads/2016-07-11_ipm_data.txt"
 data = np.genfromtxt(data_path, delimiter = ',')
 #----------------------------------
 
